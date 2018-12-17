@@ -13,7 +13,7 @@
 ## Contents
 
 1. [깔끔한 패턴](python-tricks/1_Clean_Patterns.md)
-  - assert문, dict의 콤마, with문
+    - assert문, dict의 콤마, with문
 
 ## 예제
 
