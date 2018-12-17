@@ -12,7 +12,7 @@
 
 ## Contents
 
-1. [깔끔한 패턴](python-tricks/1_Clean_Patterns.md)
+1. [깔끔한 파이썬 코드를 위한 패턴들](python-tricks/1_Clean_Patterns.md)
     - assert문, dict의 콤마, with문
 
 ## 예제
