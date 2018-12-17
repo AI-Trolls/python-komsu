@@ -10,6 +10,13 @@
 
 **즉, 실력자들의 코드 활용법들을 보고 감탄하며 새로운 활용법을 찾을 수 있는 직관력을 키워주는 것입니다!**
 
+## Contents
+
+1. [깔끔한 패턴](python-tricks/1_Clean_Patterns.md)
+  - assert문, dict의 콤마, with문
+
+## 예제
+
 ex) 딕셔너리 2개를 merge 하는 방법!
 ```python
 x = {'a': 1, 'b': 2}
