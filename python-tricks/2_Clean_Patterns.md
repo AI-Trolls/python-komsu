@@ -173,6 +173,8 @@ with managed_file('komsu.txt') as f:
   f.write('bye now')
 ```
 
+위와 같은 방법은 managed_file()는 자원을 얻는 generator 입니다. 그 후 이것은 일시적으로 실행을 잠시 미루고, 자원을 yeild합니다. caller가 떠나고 나면 generator는 실행을 재개하고 자원을 해제하기 시작합니다. 이 방법은 generator를 사용하기 때문에, generator-based implementation으로 불립니다. 기능적으로는 동등하기 때문에, 가독적인 부분에서 선택하셔서 사용하면 됩니다.
+
 <hr>
 
 ### reference
