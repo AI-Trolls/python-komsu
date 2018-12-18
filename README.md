@@ -17,7 +17,7 @@
 
 ## 예제
 
-ex) 딕셔너리 2개를 merge 하는 방법!
+### ex) 딕셔너리 2개를 merge 하는 방법!
 ```python
 x = {'a': 1, 'b': 2}
 y = {'b': 3, 'c': 4}
@@ -30,6 +30,7 @@ z = {**x, **y}
 중첩이 되는 b가 어떻게 되는지 확인하시고 순서를 정하세요!
 뒤에 있는 y로 적용됩니다!
 
+### conda install 대신 pip install 
 ex) conda install 'package_name'을 하면<br/>
 'PackagesNotFoundError: The following packages are not available from current channels:'라는 error가 뜨지만, <br/>
 pip install 'package_name'을 하면 error가 안나는 경우,<br/>
