@@ -21,7 +21,7 @@ Scrapy는 빠른 웹 크롤링 및 웹 스크래핑 프레임 워크로서 웹 �
 
 ### 설치
 ```bash
-pip install scarpy
+pip install scrapy
 ```
 
 ### 사용 방법
@@ -32,7 +32,52 @@ pip install scarpy
 4. 재귀 적으로 링크를 따라 가기 위해 스파이더 변경하기
 5. 스파이더 인수 사용하기
 
-### 예제
+크롤링은 start_urls 속성에 정의 된 URL을 요청하고,
+기본 콜백 메소드 parse를 호출하여 응답 객체를 인수로 전달하여 시작됩니다.
+구문 분석 콜백에서 CSS 선택기를 사용하여 인용 요소를 반복하고,
+추출 된 인용 텍스트와 작성자로 파이썬 사전을 만들고,
+다음 페이지에 대한 링크를 찾고 콜백과 동일한 구문 분석 메서드를 사용하여 다른 요청을 예약합니다.
+
+### 예제 1. 일단 뭔가 실행해보기
+
+명언이 적힌 사이트에서 정보를 긁어와봅시다!
+
+```python
+import scrapy
+
+class QuotesSpider(scrapy.Spider):
+    name = "quotes"
+    start_urls = [
+        'http://quotes.toscrape.com/tag/humor/',
+    ]
+
+    def parse(self, response):
+        for quote in response.css('div.quote'):
+            yield {
+                'text': quote.css('span.text::text').extract_first(),
+                'author': quote.xpath('span/small/text()').extract_first(),
+            }
+
+        next_page = response.css('li.next a::attr("href")').extract_first()
+        if next_page is not None:
+            yield response.follow(next_page, self.parse)
+```
+
+위와 같은 코드로 quotes_spider.py 파일을 생성하고, 아래 명령어로 실행합니다.
+
+```bash
+scrapy runspider quotes_spider.py -o quotes.json
+```
+
+그러면 http://quotes.toscrape.com/tag/humor/의 정보가 quotes.json에 저장된 것을 볼 수 있습니다.
+
+### 예제 2. Scrapy Tutorial
+
+이제는 scrapy 프로젝트를 생성하고 실행해봅시다.
+
+```bash
+scrapy startproject tutorial
+```
 
 ## 2. [Pyspider](https://github.com/binux/pyspider)
 
@@ -54,3 +99,8 @@ MySQL, MongoDB, Redis, SQLite, Elasticsearch, SQLAlchemy와 PostgreSQ를 데이�
 ## 3. [newspaper](https://github.com/codelucas/newspaper)
 
 Python 3의 뉴스, 전체 텍스트 및 기사 메타 데이터 추출
+
+
+reference
+1. [awesome-crawler](https://github.com/BruceDone/awesome-crawler)
+2. [Scrapy documentation](https://doc.scrapy.org/en/latest/intro/overview.html)
