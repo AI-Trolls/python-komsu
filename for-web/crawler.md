@@ -79,6 +79,36 @@ scrapy runspider quotes_spider.py -o quotes.json
 scrapy startproject tutorial
 ```
 
+위의 명령어로 tutorial이라는 프로젝트가 생성됩니다. 그 안에는 다양한 파일들이 있는데, 먼저 spiders 폴더로 들어가 quotes_spider.py 파일을 생성하고 아래의 코드를 작성합니다.
+
+```python
+import scrapy
+
+class QuotesSpider(scrapy.Spider):
+    name = "quotes"
+
+    def start_requests(self):
+        urls = [
+            'http://quotes.toscrape.com/page/1/',
+            'http://quotes.toscrape.com/page/2/',
+        ]
+        for url in urls:
+            yield scrapy.Request(url=url, callback=self.parse)
+
+    def parse(self, response):
+        page = response.url.split("/")[-2]
+        filename = 'quotes-%s.html' % page
+        with open(filename, 'wb') as f:
+            f.write(response.body)
+        self.log('Saved file %s' % filename)
+```
+
+보시다시피, Spider 클래스는 몇 가지 특성과 메서드를 정의합니다.
+- name : 스파이더를 식별합니다. 프로젝트 내에서 고유해야합니다. 즉, 다른 스파이더에 대해 동일한 이름을 설정할 수 없습니다.
+- start_requests () : Spider가 크롤링을 시작하는 요청의 반복 가능 (요청 목록을 반환하거나 생성기 함수를 작성할 수 있음)을 반환해야합니다. 후속 요청은 이러한 초기 요청에서 연속적으로 생성됩니다.
+- parse () : 각각의 요청에 대해 다운로드 된 응답을 처리하기 위해 호출 될 메소드. response 매개 변수는 페이지 내용을 보유하고 처리하는 데 도움이되는 메소드가있는 TextResponse의 인스턴스입니다.
+    parse () 메서드는 대개 응답을 파싱하고 crawl한 데이터를 dicts로 추출하고 따라가야할 새 URL을 찾고 새 요청 (Request)을 만듭니다.
+
 ## 2. [Pyspider](https://github.com/binux/pyspider)
 
 스크립트 편집기, 작업 모니터, 프로젝트 관리자 및 결과 뷰어로 강력한 WebUI를 갖고 있습니다.
