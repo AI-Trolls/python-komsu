@@ -103,11 +103,19 @@ class QuotesSpider(scrapy.Spider):
         self.log('Saved file %s' % filename)
 ```
 
-보시다시피, Spider 클래스는 몇 가지 특성과 메서드를 정의합니다.
+보시다시피, QuotesSpider 클래스는 몇 가지 특성과 메서드를 정의합니다.
 - name : 스파이더를 식별합니다. 프로젝트 내에서 고유해야합니다. 즉, 다른 스파이더에 대해 동일한 이름을 설정할 수 없습니다.
 - start_requests () : Spider가 크롤링을 시작하는 요청의 반복 가능 (요청 목록을 반환하거나 생성기 함수를 작성할 수 있음)을 반환해야합니다. 후속 요청은 이러한 초기 요청에서 연속적으로 생성됩니다.
 - parse () : 각각의 요청에 대해 다운로드 된 응답을 처리하기 위해 호출 될 메소드. response 매개 변수는 페이지 내용을 보유하고 처리하는 데 도움이되는 메소드가있는 TextResponse의 인스턴스입니다.
     parse () 메서드는 대개 응답을 파싱하고 crawl한 데이터를 dicts로 추출하고 따라가야할 새 URL을 찾고 새 요청 (Request)을 만듭니다.
+
+그럼 이제 위의 코드를 실행해봅시다!
+동일한 폴더(tutorial/spiders)에서 아래의 명령어를 실행하면 됩니다!
+
+```bash
+scrapy crawl quotes
+```
+그 결과 quotes-1.html, quotes-2.html이 생성된 것을 보실 수 있습니다.
 
 ## 2. [Pyspider](https://github.com/binux/pyspider)
 
