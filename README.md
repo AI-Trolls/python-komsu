@@ -29,3 +29,15 @@ z = {**x, **y}
 ```
 중첩이 되는 b가 어떻게 되는지 확인하시고 순서를 정하세요!
 뒤에 있는 y로 적용됩니다!
+
+ex) conda install 'package_name'을 하면<br/>
+'PackagesNotFoundError: The following packages are not available from current channels:'라는 error가 뜨지만, <br/>
+pip install 'package_name'을 하면 error가 안나는 경우,<br/>
+
+```bash
+/anaconda/envs/'venv_name'/bin/pip install 'package_name'
+```
+
+home 디렉토리에 anaconda가 있다는 가정에, venv_anme과 package_name은 본인 환경/에 맞게 수정하면 됩니다.
+conda install에 사용되는 channels가 업데이트 안되었을 때 일어나는 것으로 보입니다.
+직접 pip로 설치해주면 되는데, 그 경로를 지정하고 옮기기보다는, 위와같이 **conda 환경 내의 pip를 실행해줌으로써 해결**하는 것이 가장 편리합니다.
