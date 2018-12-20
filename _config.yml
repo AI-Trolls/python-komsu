@@ -1,4 +1,5 @@
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
+theme: minimal-mistakes-jekyll
 search: true
 search_full_content:  true
 comments:
