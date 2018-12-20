@@ -1,4 +1,4 @@
-# python-komsu
+# python-komsu - http://www.komsu.ml
 파이썬 꼼수 강의
 
 <hr>
