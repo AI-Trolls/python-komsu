@@ -1,5 +1,5 @@
-# python-komsu - http://www.komsu.ml
-파이썬 꼼수 강의
+# python-komsu
+파이썬 꼼수 강의 (http://www.komsu.ml)
 
 <hr>
 
