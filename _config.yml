@@ -18,3 +18,5 @@ defaults:
       comments: true
       share: true
       related: true
+category_dir: categories/
+tag_dir: tag/
