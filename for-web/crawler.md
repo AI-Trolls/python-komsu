@@ -1,8 +1,9 @@
 ---
-title: 깔끔한 파이썬 코드를 위한 패턴들
-permalink: /web-01/
+title: 웹 크롤러 개발
 layout: home
-nav_order: 3
+nav_order: 201
+parent: web
+permalink: /web/crawler
 ---
 
 ## 파이썬을 이용한 웹 크롤러(crawler) 개발!

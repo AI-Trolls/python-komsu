@@ -4,7 +4,7 @@
 
 layout: home
 title: home
-permalink: /
+permalink: 
 nav_order: 1
 ---
 
@@ -24,6 +24,8 @@ nav_order: 1
 
 1. [깔끔한 파이썬 코드를 위한 패턴들](python-tricks/1_Clean_Patterns.md)
     - assert문, dict의 콤마, with문
+
+2. [파이썬을 이용한 웹 크롤러(crawler) 개발!](for-web/crawler.md)
 
 ## 예제
 
