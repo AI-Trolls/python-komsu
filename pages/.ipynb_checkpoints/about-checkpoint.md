@@ -1,6 +1,7 @@
 ---
 title: About
 permalink: /about/
+layout: home
 nav_order: 2
 ---
 

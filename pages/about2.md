@@ -1,6 +1,7 @@
 ---
 title: About3
 permalink: /about3/
+layout: home
 nav_order: 3
 ---
 

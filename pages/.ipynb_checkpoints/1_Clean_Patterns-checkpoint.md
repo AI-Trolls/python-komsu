@@ -1,6 +1,7 @@
 ---
 title: 깔끔한 파이썬 코드를 위한 패턴들
 permalink: /pk-01/
+layout: home
 nav_order: 2
 ---
 # 1. 깔끔한 파이썬 코드를 위한 패턴들
