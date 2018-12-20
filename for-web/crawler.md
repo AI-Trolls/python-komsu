@@ -2,7 +2,7 @@
 title: 웹 크롤러 개발
 layout: home
 nav_order: 201
-parent: web
+parent: Web
 permalink: /web/crawler
 ---
 

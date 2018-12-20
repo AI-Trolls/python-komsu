@@ -2,7 +2,7 @@
 title: 깔끔한 파이썬 코드를 위한 패턴들
 layout: home
 nav_order: 101
-parent: pt
+parent: Tricks
 permalink: /pt/clean
 ---
 
