@@ -1,11 +1,12 @@
 header {
-    background: #222;
-    height: 52px;
-    color: #9d9d9d;
-    box-shadow: 0 2px 4px 1px rgba(0,0,0,0.5);
+    background: #1fc8db;
+    background-image: linear-gradient(141deg, #1fb8ad 0%, #2fc8db 61%, #2cb5d8 75%);
+    height: 42px;
+    color: #ffffff;
+    box-shadow: 0 2px 4px 1px rgba(0,0,0,0.25);
     margin-bottom: 20px;
     a {
-        color: #9d9d9d;
+        color: #ffffff;
         -webkit-transition: 0.2s ease;
         transition: 0.2s ease;
         &:hover {
@@ -15,7 +16,7 @@ header {
     .wrapper {
         width: 1140px;
         margin: 0 auto;
-        line-height: 52px;
+        line-height: 42px;
         .brand {
             font-size: 18px;
         }
@@ -41,9 +42,9 @@ header {
                     a {
                         display: inline-block;
                         padding: 0 10px;
-                        height: 52px;
+                        height: 42px;
                         &:hover {
-                            background-color: #000;
+                            background-color: #ca8040;
                         }
                         i {
                             margin-right: 5px;
@@ -51,8 +52,8 @@ header {
                     }
                     >.active {
                         color: #fff;
-                        background-color: #000;
-                        box-shadow: 0 25px 25px -15px rgba(255,255,255,0.93);
+                        background-color: #4080ca;
+                        #box-shadow: 0 25px 25px -15px rgba(255,255,255,0.93);
                     }
                 }
             }
