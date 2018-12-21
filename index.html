@@ -7,6 +7,16 @@ layout: default
         <h1>어서오게 여행자여</h1>
         <small>Python 스킬 레벨업을 하러 왔는가?</small>
         <hr>
+        
+        <h3 id="">파이썬 꼼수란 무엇인가?</h3>
+
+            <p>짧은 파이썬 코드, snippet은 가르치는 도구로 사용됩니다. 파이썬 트릭은 단순한 실례로 파이썬의 한 측면을 가르치거나 <strong>동기를 부여</strong>하는 예제로 사용되어 더 깊히 파고들어 <strong>직관적인 이해</strong>를 할 수 있도록 도와줍니다.<br/></p>
+            <div style="text-align: right">-in "Python Tricks The Book" written by Dan Bader</div>
+        <br/>
+
+            <p><strong>즉, 실력자들의 코드 활용법들을 보고 감탄하며 새로운 활용법을 찾을 수 있는 직관력을 키워주는 것입니다!</strong></p>
+        <br/>
+
         <ul>
             {% for post in paginator.posts %}
               <li>
@@ -36,9 +46,11 @@ layout: default
                 <div class="excerpt">
                     {{post.excerpt}}
                 </div>
+                  <!--
                 <div class="read-all">
                     <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
+                    -->
                 <hr>
               </li>
             {% endfor %}
