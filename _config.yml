@@ -29,7 +29,7 @@ description_footer: 팁을 공유해주세요!
 disqus_shortname: 
 
 # baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
-# google_analytics_id: UA-72449510-4 # google 分析追踪id
+google_analytics_id: UA-131381287-1
 
 # Build settings
 markdown: kramdown
