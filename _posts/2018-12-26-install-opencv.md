@@ -2,15 +2,9 @@
 layout: post
 title:  "이미지를 다루는 openCV 라이브러리 python 설치 및 오류 해결"
 categories: Python
-tags: python directory file
+tags: python opencv file
 author: seriousmac
 ---
-
-* content
-{:toc}
-
-
-
 
 ## openCV 라이브러리 설치 및 사용
 
