@@ -39,6 +39,6 @@ pip install 'package_name'을 하면 error가 안나는 경우,<br/>
 /anaconda/envs/'venv_name'/bin/pip install 'package_name'
 ```
 
-home 디렉토리에 anaconda가 있다는 가정에, venv_anme과 package_name은 본인 환경/에 맞게 수정하면 됩니다.
+home 디렉토리에 anaconda가 있다는 가정에, venv_name과 package_name은 본인 환경/에 맞게 수정하면 됩니다.
 conda install에 사용되는 channels가 업데이트 안되었을 때 일어나는 것으로 보입니다.
 직접 pip로 설치해주면 되는데, 그 경로를 지정하고 옮기기보다는, 위와같이 **conda 환경 내의 pip를 실행해줌으로써 해결**하는 것이 가장 편리합니다.
